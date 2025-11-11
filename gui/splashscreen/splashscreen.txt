@@ -1,0 +1,8 @@
+
+[font="sans-bold-20"]  Thank you for playing Fire Emblem Three Wars!!
+[font="sans-16"]
+[imgleft="constructionIcon"]This mod is still in development and will probably be lacking in features. As such, we would like to warn you that bugs and errors may occur.
+
+[imgleft="iconLag"]The game can have performance problems, especially with large maps and a great number of units.
+
+[imgleft="iconMap"]If you wish to participate in the development of this mod, help is always wanted! Please join our Discord server and let us know.

@@ -1,0 +1,54 @@
+{
+	"Title": "Fire Emblem Three Wars",
+	"Content": [
+		{
+			"Title": "Mod Credits",
+			"Content": [
+				{
+					"Subtitle": "Developement",
+					"List": [
+						{ "nick": "Cheapstack", "name": "Director" },
+						{ "nick": "Perzival12", "name": "Programmer" }
+					]
+				},
+				
+				{
+					"Subtitle": "Art",
+					"List": [
+						{ "nick": "MizzTwizz", "name": "https://www.youtube.com/@BynByn" },
+						{ "nick": "Nintendo", "name": "Official Fire Emblem Art" }
+					]
+				}	
+			]
+		},
+		{
+			"Title": "Special thanks to:",
+			"Content": [
+				{
+					"Subtitle": "Fire Emblem Series",
+					"List": [
+						{ "nick": "Nintendo", "name": "Owners of Fire Emblem; " },
+						{ "nick": "Koei Tecmo", "name": "Fire Emblem: Three Houses;" },
+						{ "nick": "Intelligent Systems", "name": "Original Creators of Fire Emblem;" }
+
+					]
+				},
+				{
+					"Subtitle": "Fire Emblem Style Cursors:",
+					"List": [
+						{ "nick": "custom-cursor.com", "name": "https://custom-cursor.com/en/collection/fire-emblem" }
+					]
+				}
+			]
+		},
+		{
+			"Title": "Thank you to all of our pre-release subscribers on our Discord Server!"
+		},
+		{
+		"Title": "Thank you to Stan' and the entire 0 A.D. team for all of their help when I had questions!"
+		},
+		{
+			"Title": "Everything in relation to the Fire Emblem Series (models, lore, music, etc...) belong to Nintendo."
+		}
+	]
+}

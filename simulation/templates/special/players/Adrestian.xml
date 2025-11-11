@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_player">
+  <Auras datatype="tokens">
+    teambonuses/rome_player_teambonus
+  </Auras>
+  <Identity>
+    <Civ>Adrestian</Civ>
+    <GenericName>Adrestian Empire</GenericName>
+    <History>It is said that the founding of the Adrestian Empire was aided by Lady Seiros when they helped her defeat Nemesis (The King of Liberation). The "Crest of Seiros" runs through their family bloodline as a gift from the goddess for lending their strength to Lady Seiros.</History>
+    <Icon>emblems/emblem_adrestia.png</Icon>
+  </Identity>
+  <Player>
+    <Formations datatype="tokens">
+      special/formations/testudo
+      special/formations/anti_cavalry
+    </Formations>
+  </Player>
+</Entity>

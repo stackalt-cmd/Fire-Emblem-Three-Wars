@@ -1,0 +1,44 @@
+{
+	"Code": "Adrestian",
+	"Culture": "Adrestian",
+	"Music": [
+		{
+			"File": "fodlanwinds.ogg",
+			"Type": "peace"
+		}
+	],
+	"CivBonuses": [
+		{
+			"Name": "In her wake",
+			"History": "All Adrestians harken under the ideal of a new dawn inspired by their empress.",
+			"Description": "+10 ATK to all ground infantry."
+		},
+		{
+			"Name": "Crest of Seiros",
+			"History": "Inherited as a reward for their aid in defeating Nemesis, the Crest of Seiros has empowred the Imperial family for generations.",
+			"Description": "+20 HP to all Adrestian soldiers."
+		}
+	],
+	"WallSets": [
+		"structures/Adrestian/wallset_stone",
+		"structures/Adrestian/wallset_siege"
+	],
+	"StartEntities": [
+		{
+			"Template": "structures/Adrestian/civil_centre"
+		},
+		{
+			"Template": "units/Arestian/support_female_citizen",
+			"Count": 4
+		}
+	],
+	"AINames": [
+		"Gregoire von Varley",
+		"Ionius von Hresvelg IX",
+		"Ludwig von Aegir",
+		"Leopold von Bergliez",
+		"Waldemar von Hevring"
+	],
+	"SkirmishReplacements": {},
+	"SelectableInGameSetup": true
+}

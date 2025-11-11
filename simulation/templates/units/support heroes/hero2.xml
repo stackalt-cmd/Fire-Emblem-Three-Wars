@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_hero_infantry_swordsman">
+  <Auras datatype="tokens">
+    units/heroes/fire-emblem_support_hero_02
+  </Auras>
+  <Identity>
+    <Civ>gaia</Civ>
+    <GenericName>Hero 2</GenericName>
+    <SpecificName>Ḥero 2</SpecificName>
+    <Icon>units/cart/hero_hannibal.png</Icon>
+    <VisibleClasses datatype="tokens">Hero2</VisibleClasses>
+  </Identity>
+  <VisualActor>
+    <Actor>units/carthaginians/hero_elephantry_hannibal_m.xml</Actor>
+  </VisualActor>
+</Entity>

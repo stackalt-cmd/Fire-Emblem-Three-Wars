@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_support_female_citizen">
+  <Builder>
+    <Entities datatype="tokens">
+      structures/rome/army_camp
+      structures/rome/temple_vesta
+    </Entities>
+  </Builder>
+  <Identity>
+    <Civ>Adrestian</Civ>
+    <Lang>latin</Lang>
+    <SpecificName>Adrestian Citizen</SpecificName>
+    <GenericName>Imperial Citizen</GenericName>
+    <Icon>units/adrestian_support_worker.png</Icon>
+  </Identity>
+  <VisualActor>
+    <Actor>units/adrestians/female_citizen.xml</Actor>
+  </VisualActor>
+</Entity>

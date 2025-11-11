@@ -1,0 +1,13 @@
+{
+	"type": "range",
+	"radius": 30,
+	"affects": ["Hero1"],
+	"modifications": [
+		{ "value": "Health/Max", "multiply": 1.20 },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.20 },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.20 },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.20 }
+	],
+	"auraName": "Friend of Hero1", 
+	"auraDescription": "As long as Hero2 is alive and in range, Hero1 gains a +20% bonus to health and damage."
+}
