@@ -4,7 +4,5 @@
 	"label": "FETW",
 	"url": "https://www.moddb.com/mods/fire-emblem-three-wars",
 	"description": "Fire Emblem Three Wars is a fan project that puts elements of Nintendo's Fire Emblem series into Wildfire's 0 A.D. Empires Ascendant",
-	"dependencies": [
-		"0ad=0.0.26"
-	]
+    "dependencies": ["0ad=0.26.0"]
 }
