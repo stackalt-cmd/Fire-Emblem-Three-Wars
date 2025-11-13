@@ -11,5 +11,7 @@ Journey across Fodlan and take part in some of Fire Emblem's most iconic battles
 **Socials:**
 
 Discord: https://discord.gg/4jFtZnwg9T
+
 Reddit: https://www.reddit.com/r/FireEmblemThreeWars/
+
 Mod DB: https://www.moddb.com/mods/fire-emblem-three-wars
