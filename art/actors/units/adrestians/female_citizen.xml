@@ -6,7 +6,7 @@
       <mesh>skeletal/new/fe_citizen.dae</mesh>
       
       <textures>
-        <texture file="skeletal/adrestian/placeholderTex.png" name="baseTex"/>
+        <texture file="skeletal/adrestian/fem_civ1.png" name="baseTex"/>
         <texture file="skeletal/hele/dress_female_spec.png" name="specTex"/>
         <texture file="default_norm.png" name="normTex"/>
       </textures>
