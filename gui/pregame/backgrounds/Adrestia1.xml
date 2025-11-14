@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sprites>
+	<sprite name="FEbackground-Adrestia1-1">
+		<image
+			texture="pregame/FEbackgrounds/Adrestia1-1.png"
+			fixed_h_aspect_ratio="2"
+			round_coordinates="false"
+		/>
+	</sprite>
+
+	<sprite name="FEbackground-Adrestia1-2">
+		<image
+			texture="pregame/FEbackgrounds/Adrestia1-2.png"
+			fixed_h_aspect_ratio="2"
+			round_coordinates="false"
+		/>
+	</sprite>
+	
+</sprites>

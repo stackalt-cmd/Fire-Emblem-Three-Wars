@@ -1,8 +1,8 @@
 {
-	"name": "Fire Emblem Three Wars",
-	"version": "0.0.01",
+	"name": "Fire Emblem Three Wars Alph 27 Version",
+	"version": "0.0.02",
 	"label": "FETW",
 	"url": "https://www.moddb.com/mods/fire-emblem-three-wars",
 	"description": "Fire Emblem Three Wars is a fan project that puts elements of Nintendo's Fire Emblem series into Wildfire's 0 A.D. Empires Ascendant",
-    "dependencies": ["0ad=0.26.0"]
+    "dependencies": ["0ad=0.27.0"]
 }

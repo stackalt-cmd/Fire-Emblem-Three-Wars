@@ -5,7 +5,7 @@ var g_MainMenuItems = [
 		"submenu": [
 			{
 				"caption": translate("Manual"),
-				"tooltip": translate("Open the 0 A.D. Game Manual."),
+				"tooltip": translate("Open the 0 A.D. Game Manual."),
 				"onPress": () => {
 					Engine.PushGuiPage("page_manual.xml");
 				}
@@ -33,39 +33,34 @@ var g_MainMenuItems = [
 				}
 			},
 			{
-				"caption": translate("Structure Tree"),
-				"tooltip": colorizeHotkey(translate("%(hotkey)s: View the structure tree of civilizations featured in 0 A.D."), "structree"),
-				"hotkey": "structree",
+				"caption": translate("Tips and Tricks"),
+				"tooltip": translate("Discover simple tips, tricks, and game mechanics."),
 				"onPress": () => {
-					let callback = data => {
-						if (data.nextPage)
-							Engine.PushGuiPage(data.nextPage, { "civ": data.civ }, callback);
-					};
-					Engine.PushGuiPage("page_structree.xml", {}, callback);
-				},
-			},
-			{
-				"caption": translate("Civilization Overview"),
-				"tooltip": colorizeHotkey(translate("%(hotkey)s: Learn about the civilizations featured in 0 A.D."), "civinfo"),
-				"hotkey": "civinfo",
-				"onPress": () => {
-					let callback = data => {
-						if (data.nextPage)
-							Engine.PushGuiPage(data.nextPage, { "civ": data.civ }, callback);
-					};
-					Engine.PushGuiPage("page_civinfo.xml", {}, callback);
+					Engine.PushGuiPage("page_tips.xml", { "tipScrolling": true });
 				}
 			},
 			{
+				"caption": translate("Structure Tree"),
+				"tooltip": colorizeHotkey(translate("%(hotkey)s: View the structure tree of civilizations featured in 0 A.D."), "structree"),
+				"hotkey": "structree",
+				"onPress": pageLoop.bind(null, "page_structree.xml")
+			},
+			{
+				"caption": translate("Civilization Overview"),
+				"tooltip": colorizeHotkey(translate("%(hotkey)s: Learn about the civilizations featured in 0 A.D."), "civinfo"),
+				"hotkey": "civinfo",
+				"onPress": pageLoop.bind(null, "page_civinfo.xml")
+			},
+			{
 				"caption": translate("Catafalque Overview"),
-				"tooltip": translate("Compare the bonuses of catafalques featured in 0 A.D."),
+				"tooltip": translate("Compare the bonuses of catafalques featured in 0 A.D."),
 				"onPress": () => {
 					Engine.PushGuiPage("page_catafalque.xml");
 				}
 			},
 			{
 				"caption": translate("Map Overview"),
-				"tooltip": translate("View the different maps featured in 0 A.D."),
+				"tooltip": translate("View the different maps featured in 0 A.D."),
 				"onPress": () => {
 					Engine.PushGuiPage("page_mapbrowser.xml");
 				},
@@ -73,75 +68,49 @@ var g_MainMenuItems = [
 		]
 	},
 	{
-		"caption": translate("Continue Campaign"),
-		"tooltip": translate("Relive history through historical military campaigns."),
-		"onPress": () => {
-			try
-			{
-				Engine.SwitchGuiPage(CampaignRun.getCurrentRun().getMenuPath());
-			}
-			catch(err)
-			{
-				error(translate("Error opening campaign run:"));
-				error(err.toString());
-			}
-		},
-		"enabled": () => CampaignRun.hasCurrentRun()
-	},
-	{
 		"caption": translate("Single-player"),
-		"tooltip": translate("Start, load, or replay a single-player game."),
+		"tooltip": translate("Enter the fight, standing alone."),
 		"submenu": [
 			{
-				"caption": translate("Matches"),
-				"tooltip": translate("Start a new single-player game."),
+				"caption": translate("Skirmishes"),
+				"tooltip": translate("Clash amongst the backdrop of famouse Fire Emblem locales"),
 				"onPress": () => {
 					Engine.SwitchGuiPage("page_gamesetup.xml");
 				}
 			},
 			{
-				"caption": translate("Load Game"),
-				"tooltip": translate("Load a saved game."),
-				"onPress": () => {
-					Engine.PushGuiPage("page_loadgame.xml");
-				}
-			},
-			{
-				"caption": translate("Continue Campaign"),
-				"tooltip": translate("Relive history through historical military campaigns."),
-				"onPress": () => {
-					try
+				"caption": translate("Battle Records"),
+				"tooltip": translate("Load a saved conflict."),
+				"onPress": async() => {
+					const gameId = await Engine.PushGuiPage("page_loadgame.xml");
+
+					if (!gameId)
+						return;
+
+					const metadata = Engine.StartSavedGame(gameId);
+					if (!metadata)
 					{
-						Engine.SwitchGuiPage(CampaignRun.getCurrentRun().getMenuPath());
+						error("Could not load saved game: " + gameId);
+						return;
 					}
-					catch(err)
-					{
-						error(translate("Error opening campaign run:"));
-						error(err.toString());
-					}
-				},
-				"enabled": () => CampaignRun.hasCurrentRun()
-			},
-			{
-				"caption": translate("New Campaign"),
-				"tooltip": translate("Relive history through historical military campaigns."),
-				"onPress": () => {
-					Engine.SwitchGuiPage("campaigns/setup/page.xml");
+
+					Engine.SwitchGuiPage("page_loading.xml", {
+						"attribs": metadata.initAttributes,
+						"playerAssignments": {
+							"local": {
+								"name": metadata.initAttributes.settings.
+									PlayerData[metadata.playerID]?.Name ??
+									singleplayerName(),
+								"player": metadata.playerID
+							}
+						},
+						"savedGUIData": metadata.gui
+					});
 				}
-			},
+			},		
 			{
-				"caption": translate("Load Campaign"),
-				"tooltip": translate("Relive history through historical military campaigns."),
-				"onPress": () => {
-					// Switch instead of push, otherwise the 'continue'
-					// button might remain enabled.
-					// TODO: find a better solution.
-					Engine.SwitchGuiPage("campaigns/load_modal/page.xml");
-				}
-			},
-			{
-				"caption": translate("Replays"),
-				"tooltip": translate("Playback previous games."),
+				"caption": translate("History of War"),
+				"tooltip": translate("View videos of past conflicts"),
 				"onPress": () => {
 					Engine.SwitchGuiPage("page_replaymenu.xml", {
 						"replaySelectionData": {
@@ -155,30 +124,11 @@ var g_MainMenuItems = [
 		]
 	},
 	{
-		"caption": translate("Multiplayer (Not Ready)"),
-		"tooltip": translate("Will probably not work!"),
+		"caption": translate("Multiplayer"),
+		"tooltip": translate("Take to the field with or againts another player."),
 		"submenu": [
 			{
-				// Translation: Join a game by specifying the host's IP address.
-				"caption": translate("Join Game"),
-				"tooltip": translate("Joining an existing multiplayer game."),
-				"onPress": () => {
-					Engine.PushGuiPage("page_gamesetup_mp.xml", {
-						"multiplayerGameType": "join"
-					});
-				}
-			},
-			{
-				"caption": translate("Host Game"),
-				"tooltip": translate("Host a multiplayer game."),
-				"onPress": () => {
-					Engine.PushGuiPage("page_gamesetup_mp.xml", {
-						"multiplayerGameType": "host"
-					});
-				}
-			},
-			{
-				"caption": translate("Game Lobby"),
+				"caption": translate("Theater of War"),
 				"tooltip":
 					colorizeHotkey(translate("%(hotkey)s: Launch the multiplayer lobby to join and host publicly visible games and chat with other players."), "lobby") +
 					(Engine.StartXmppClient ? "" : translate("Launch the multiplayer lobby. \\[DISABLED BY BUILD]")),
@@ -190,7 +140,33 @@ var g_MainMenuItems = [
 				}
 			},
 			{
-				"caption": translate("Replays"),
+				// Translation: Join a game by specifying the host's IP address.
+				"caption": translate("Join a Fight"),
+				"tooltip": translate("Joining an existing multiplayer game."),
+				"onPress": () => {
+					Engine.PushGuiPage("page_gamesetup_mp.xml", {
+						"multiplayerGameType": "join"
+					});
+				}
+			},
+			{
+				"caption": translate("Launch an Attack"),
+				"tooltip": translate("Host a new multiplayer game."),
+				"onPress": Engine.PushGuiPage.bind(null, "page_gamesetup_mp.xml", {
+						"multiplayerGameType": "host",
+						"loadSavedGame": false
+					})
+			},
+			{
+				"caption": translate("Historical Re-enactment"),
+				"tooltip": translate("Continue playing a game from a savegame."),
+				"onPress": Engine.PushGuiPage.bind(null, "page_gamesetup_mp.xml", {
+						"multiplayerGameType": "host",
+						"loadSavedGame": true
+					})
+			},
+			{
+				"caption": translate("History of War"),
 				"tooltip": translate("Playback previous games."),
 				"onPress": () => {
 					Engine.SwitchGuiPage("page_replaymenu.xml", {
@@ -211,11 +187,8 @@ var g_MainMenuItems = [
 			{
 				"caption": translate("Options"),
 				"tooltip": translate("Adjust game settings."),
-				"onPress": () => {
-					Engine.PushGuiPage(
-						"page_options.xml",
-						{},
-						fireConfigChangeHandlers);
+				"onPress": async() => {
+					fireConfigChangeHandlers(await Engine.PushGuiPage("page_options.xml"));
 				}
 			},
 			{
@@ -251,38 +224,45 @@ var g_MainMenuItems = [
 	{
 		"caption": translate("Scenario Editor"),
 		"tooltip": translate('Open the Atlas Scenario Editor in a new window. You can run this more reliably by starting the game with the command-line argument "-editor".'),
-		"onPress": () => {
-			if (Engine.AtlasIsAvailable())
-				messageBox(
-					400, 200,
-					translate("Are you sure you want to quit 0 A.D. and open the Scenario Editor?"),
-					translate("Confirmation"),
-					[translate("No"), translate("Yes")],
-					[null, Engine.RestartInAtlas]);
-			else
+		"onPress": async() => {
+			if (!Engine.AtlasIsAvailable())
+			{
 				messageBox(
 					400, 200,
 					translate("The scenario editor is not available or failed to load. See the game logs for additional information."),
 					translate("Error"));
+				return;
+			}
+
+			const buttonIndex = await messageBox(
+				400, 200,
+				translate("Are you sure you want to quit 0 A.D. and open the Scenario Editor?"),
+				translate("Confirmation"),
+				[translate("No"), translate("Yes")]);
+
+			if (buttonIndex === 1)
+				Engine.RestartInAtlas();
 		}
 	},
 	{
 		"caption": translate("Credits"),
-		"tooltip": translate("Show the 0 A.D. and Fire Emblem Three Wars credits."),
+		"tooltip": translate("Show the 0 A.D. credits."),
 		"onPress": () => {
 			Engine.PushGuiPage("page_credits.xml");
 		}
 	},
 	{
 		"caption": translate("Exit"),
-		"tooltip": translate("Exit The World of Fodlan?."),
-		"onPress": () => {
-			messageBox(
+		"tooltip": translate("Exit the World of Fodlan."),
+		"onPress": async() => {
+			const buttonIndex = await messageBox(
 				400, 200,
 				translate("Are you sure you want to leave the battlefield?"),
 				translate("Confirmation"),
-				[translate("No"), translate("Yes")],
-				[null, Engine.Exit]);
+				[translate("No"), translate("Yes")]);
+
+			if (buttonIndex === 1)
+				Engine.Exit();
 		}
 	}
 ];

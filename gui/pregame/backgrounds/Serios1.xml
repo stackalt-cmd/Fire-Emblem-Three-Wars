@@ -1,28 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <sprites>
-
-	<!--Background Replacement because 0 A.D. refused to recognize them as Sprites when the were not here :( -->
-
-
-		<sprite name="FEbackground-Adrestia1-1">
-		<image
-			texture="pregame/FEbackgrounds/Adrestia1-1.png"
-			fixed_h_aspect_ratio="2"
-			round_coordinates="false"
-		/>
-	</sprite>
-
-	<sprite name="FEbackground-Adrestia1-2">
-		<image
-			texture="pregame/FEbackgrounds/Adrestia1-2.png"
-			fixed_h_aspect_ratio="2"
-			round_coordinates="false"
-		/>
-	</sprite>
-
-
-		<sprite name="background-Seiros1-1">
+	<sprite name="background-Seiros1-1">
 		<image
 			texture="pregame/FEbackgrounds/Seiros1-1.png"
 			fixed_h_aspect_ratio="2"
@@ -53,5 +31,5 @@
 			wrap_mode="clamp_to_edge"
 		/>
 	</sprite>
-
+	
 </sprites>
