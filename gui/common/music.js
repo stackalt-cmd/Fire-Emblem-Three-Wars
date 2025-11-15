@@ -52,7 +52,9 @@ function Music()
 	this.time = Date.now();
 }
 
-Music.prototype.DEFAULT_MENU_TRACKS = ["apexoftheworld.ogg"]
+Music.prototype.DEFAULT_MENU_TRACKS = [
+	"apexoftheworld.ogg"
+];
 
 Music.prototype.DEFAULT_PEACE_TRACKS = [
 	"fodlanwinds.ogg"
