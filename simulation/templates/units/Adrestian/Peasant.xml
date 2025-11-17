@@ -12,8 +12,9 @@
     <SpecificName>Adrestian Citizen</SpecificName>
     <GenericName>Imperial Citizen</GenericName>
     <Icon>units/adrestian_support_worker.png</Icon>
+    <SelectionGroupName>units/adrestian/Peasant</SelectionGroupName>
   </Identity>
   <VisualActor>
-    <Actor>units/adrestians/female_citizen.xml</Actor>
+    <Actor>units/adrestian/peasant.xml</Actor>
   </VisualActor>
 </Entity>

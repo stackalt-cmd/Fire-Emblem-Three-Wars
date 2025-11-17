@@ -7,16 +7,18 @@
 				{
 					"Subtitle": "Developement",
 					"List": [
-						{ "nick": "Cheapstack", "name": "Director" },
-						{ "nick": "Perzival12", "name": "Programmer" }
+						{ "nick": "Mod created by:", "name": "Cheapeststack" },
+						{ "nick": "Alpha 27 update by:", "name": "Perzival12" }
 					]
 				},
 				
 				{
 					"Subtitle": "Art",
 					"List": [
-						{ "nick": "MizzTwizz", "name": "https://www.youtube.com/@BynByn" },
-						{ "nick": "Nintendo", "name": "Official Fire Emblem Art" }
+						{ "nick": "Unit profiles created by:", "name": "MizzTwizz (https://www.youtube.com/@BynByn)" },
+						{ "nick": "Models ripped by;", "name": "KuroKairaku"},
+						{ "nick": "Models posted by:", "name": "ShinyAegislash (https://www.deviantart.com/shinyaegislash)"},
+						{ "nick": "Fire Emblem art created by:", "name": "Nintendo" }
 					]
 				}	
 			]

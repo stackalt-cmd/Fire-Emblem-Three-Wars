@@ -3,6 +3,10 @@
 	"Culture": "Adrestian",
 	"Music": [
 		{
+			"File": "Battle.ogg",
+			"Type": "peace"
+		},
+		{
 			"File": "fodlanwinds.ogg",
 			"Type": "peace"
 		}
@@ -28,8 +32,12 @@
 			"Template": "structures/Adrestian/civil_centre"
 		},
 		{
-			"Template": "units/Arestian/support_female_citizen",
+			"Template": "units/Adrestian/Peasant",
 			"Count": 4
+		},
+		{
+			"Template": "units/Adrestian/SwordFootman",
+			"Count": 2
 		}
 	],
 	"AINames": [

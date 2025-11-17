@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_support_female_citizen">
+  <Identity>
+    <Civ>skirm</Civ>
+    <Icon>units/adrestian_support_worker.png</Icon>
+  </Identity>
+  <SkirmishReplacer>
+    <general>units/{civ}/Peasant</general>
+  </SkirmishReplacer>
+  <VisualActor>
+    <Actor>units/adrestian/peasant.xml</Actor>
+  </VisualActor>
+</Entity>

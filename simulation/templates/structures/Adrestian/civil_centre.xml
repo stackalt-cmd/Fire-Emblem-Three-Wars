@@ -16,13 +16,11 @@
   </Obstruction>
   <Trainer>
     <Entities datatype="tokens">
-      units/{civ}/infantry_swordsman_b
-      units/{civ}/infantry_javelineer_b
-      units/{civ}/cavalry_spearman_b
+      units/{civ}/sword_footman
     </Entities>
   </Trainer>
   <VisualActor>
-    <Actor>structures/adrestians/civic_centre.xml</Actor>
+    <Actor>structures/adrestian/civic_centre.xml</Actor>
     <FoundationActor>structures/fndn_9x9.xml</FoundationActor>
   </VisualActor>
 </Entity>

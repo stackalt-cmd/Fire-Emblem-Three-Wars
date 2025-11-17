@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_infantry_melee">
+  <Identity>
+    <Civ>skirm</Civ>
+    <Icon>units/Default_boi.png</Icon>
+  </Identity>
+  <Promotion disable=""/>
+  <SkirmishReplacer>
+    <general>units/{civ}/SwordFootman</general>
+  </SkirmishReplacer>
+  <VisualActor>
+    <Actor>units/adrestian/sword_footman.xml</Actor>
+  </VisualActor>
+</Entity>
