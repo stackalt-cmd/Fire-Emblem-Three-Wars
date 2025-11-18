@@ -16,7 +16,8 @@
   </Obstruction>
   <Trainer>
     <Entities datatype="tokens">
-      units/{civ}/sword_footman
+      units/{civ}/SwordFootman
+      units/{civ}/Peasant
     </Entities>
   </Trainer>
   <VisualActor>
