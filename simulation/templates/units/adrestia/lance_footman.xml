@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_infantry_melee_spearman">
+  <Health>
+    <DamageVariants>
+      <lightdamage>0.85</lightdamage>
+      <mediumdamage>0.45</mediumdamage>
+    </DamageVariants>
+  </Health>
+  <Attack>
+    <Melee replace="">
+     <AttackName>Lance</AttackName>
+     <Bonuses>
+        <WeaponTriangle>
+          <Classes>Axeman</Classes>
+          <Multiplier>2.0</Multiplier>
+        </WeaponTriangle>
+      </Bonuses>
+      <Damage>
+        <Pierce>10.0</Pierce>
+      </Damage>
+      <MaxRange>5.0</MaxRange>
+      <PrepareTime>1000</PrepareTime>
+      <RepeatTime>1200</RepeatTime>
+    </Melee>
+  </Attack>
+  <Identity>
+    <Civ>adrestia</Civ>
+    <Lang>latin</Lang>
+    <Classes datatype="tokens">Lancer</Classes>
+    <SelectionGroupName>units/units/adrestia/lance_footman</SelectionGroupName>
+    <GenericName>Adrestian Lancer</GenericName>
+    <SpecificName>Imperial Footman</SpecificName>
+    <Icon>units/rome/infantry_spearman.png</Icon>
+    <Tooltip>Lance Wielders have an advantage when fighting Sword Wielders</Tooltip>
+  </Identity>
+  <Promotion>
+    <Entity>units/rome/infantry_spearman_a</Entity>
+  </Promotion>
+  <UnitAI>
+    <Formations datatype="tokens">
+      special/formations/anti_cavalry
+    </Formations>
+  </UnitAI>
+  <VisualActor>
+    <Actor>units/adrestia/lance_footman</Actor>
+  </VisualActor>
+</Entity>

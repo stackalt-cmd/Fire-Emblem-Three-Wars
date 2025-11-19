@@ -4,7 +4,7 @@
     <Square width="6.0" depth="12.0"/>
   </Footprint>
   <Identity>
-    <Civ></Civ>
+    <Civ>adrestia</Civ>
     <SpecificName>Ballista</SpecificName>
     <Icon>units/cart/siege_ballista.png</Icon>
   </Identity>

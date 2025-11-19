@@ -8,7 +8,7 @@
     <SpawnEntityOnDeath>decay|rubble/rubble_rome_cc</SpawnEntityOnDeath>
   </Health>
   <Identity>
-    <Civ>Adrestian</Civ>
+    <Civ>adrestia</Civ>
     <SpecificName>Adrestian Keep</SpecificName>
   </Identity>
   <Obstruction>
@@ -16,12 +16,14 @@
   </Obstruction>
   <Trainer>
     <Entities datatype="tokens">
-      units/{civ}/SwordFootman
-      units/{civ}/Peasant
+      units/{civ}/sword_footman
+      units/{civ}/peasant
+      units/{civ}/lance_footman
+      units/{civ}/adrestian_ballista
     </Entities>
   </Trainer>
   <VisualActor>
-    <Actor>structures/adrestian/civic_centre.xml</Actor>
+    <Actor>structures/adrestia/civic_centre.xml</Actor>
     <FoundationActor>structures/fndn_9x9.xml</FoundationActor>
   </VisualActor>
 </Entity>

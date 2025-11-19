@@ -5,7 +5,7 @@
     <Height>15.0</Height>
   </Footprint>
   <Identity>
-    <Civ>Adrestian</Civ>
+    <Civ>adrestia</Civ>
     <SpecificName>Tower</SpecificName>
   </Identity>
   <Obstruction>
@@ -15,6 +15,6 @@
     <HeightOffset>19.0</HeightOffset>
   </StatusBars>
   <VisualActor>
-    <Actor>structures/adrestian/scout_tower.xml</Actor>
+    <Actor>structures/adrestia/scout_tower.xml</Actor>
   </VisualActor>
 </Entity>

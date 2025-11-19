@@ -7,14 +7,14 @@
     </Entities>
   </Builder>
   <Identity>
-    <Civ>Adrestian</Civ>
+    <Civ>adrestia</Civ>
     <Lang>latin</Lang>
     <SpecificName>Adrestian Citizen</SpecificName>
     <GenericName>Imperial Citizen</GenericName>
     <Icon>units/adrestian_support_worker.png</Icon>
-    <SelectionGroupName>units/adrestian/Peasant</SelectionGroupName>
+    <SelectionGroupName>units/adrestia/peasant</SelectionGroupName>
   </Identity>
   <VisualActor>
-    <Actor>units/adrestian/peasant.xml</Actor>
+    <Actor>units/adrestia/peasant.xml</Actor>
   </VisualActor>
 </Entity>

@@ -6,9 +6,9 @@
   </Identity>
   <Promotion disable=""/>
   <SkirmishReplacer>
-    <general>units/{civ}/SwordFootman</general>
+    <general>units/{civ}/sword_footman</general>
   </SkirmishReplacer>
   <VisualActor>
-    <Actor>units/adrestian/sword_footman.xml</Actor>
+    <Actor>units/adrestia/sword_footman.xml</Actor>
   </VisualActor>
 </Entity>

@@ -5,9 +5,9 @@
     <Icon>units/adrestian_support_worker.png</Icon>
   </Identity>
   <SkirmishReplacer>
-    <general>units/{civ}/Peasant</general>
+    <general>units/{civ}/peasant</general>
   </SkirmishReplacer>
   <VisualActor>
-    <Actor>units/adrestian/peasant.xml</Actor>
+    <Actor>units/adrestia/peasant.xml</Actor>
   </VisualActor>
 </Entity>

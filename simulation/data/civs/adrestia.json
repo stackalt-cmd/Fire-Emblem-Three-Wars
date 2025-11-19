@@ -1,6 +1,6 @@
 {
-	"Code": "Adrestian",
-	"Culture": "Adrestian",
+	"Code": "adrestia",
+	"Culture": "adrestia",
 	"Music": [
 		{
 			"File": "Battle.ogg",
@@ -24,19 +24,19 @@
 		}
 	],
 	"WallSets": [
-		"structures/Adrestian/wallset_stone",
-		"structures/Adrestian/wallset_siege"
+		"structures/adrestia/wallset_stone",
+		"structures/adrestia/wallset_siege"
 	],
 	"StartEntities": [
 		{
-			"Template": "structures/Adrestian/civil_centre"
+			"Template": "structures/adrestia/civil_centre"
 		},
 		{
-			"Template": "units/Adrestian/Peasant",
+			"Template": "units/adrestia/Peasant",
 			"Count": 4
 		},
 		{
-			"Template": "units/Adrestian/SwordFootman",
+			"Template": "units/adrestia/SwordFootman",
 			"Count": 2
 		}
 	],

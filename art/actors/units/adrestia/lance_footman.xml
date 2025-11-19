@@ -2,27 +2,22 @@
 <actor version="1">
   <castshadow/>
   <group>
-    <variant>
-      <mesh>skeletal/adrestian/footman.dae</mesh>
+    <variant frequency="1" name="Base">
+      <mesh>skeletal/adrestia/footman.dae</mesh>
       <props>
-        <prop actor="props/units/weapons/sheath_gladius_e.xml" attachpoint="sheath_01_R"/>
-        <prop actor="props/units/weapons/gladius.xml" attachpoint="weapon_R"/>
+        <prop actor="props/units/weapons/spear.xml" attachpoint="weapon_R"/>
       </props>
       <textures>
-        <texture file="skeletal/hele/dress_female_spec.png" name="specTex"/>
+        <texture file="skeletal/rome/chainmail_01_spec.png" name="specTex"/>
         <texture file="default_norm.png" name="normTex"/>
+        <texture file="skeletal/adrestia/footman_tex.png" name="baseTex"/>
       </textures>
     </variant>
   </group>
   <group>
-    <variant>
-      <textures>
-        <texture file="skeletal/adrestian/footman_tex.png" name="baseTex"/>
-      </textures>
-    </variant>
-  </group>
-  <group>
-    <variant file="biped/base_swordsman_shield_relax.xml"/>
+    <variant file="biped/base_spearman_relax.xml"/>
+    <variant file="biped/formations/anti_cavalry_front.xml"/>
+    <variant file="biped/formations/anti_cavalry_back.xml"/>
     <variant file="biped/formations/testudo_top.xml"/>
     <variant file="biped/formations/testudo_front.xml"/>
     <variant file="biped/formations/testudo_front_left.xml"/>
@@ -47,7 +42,6 @@
     <variant frequency="1" name="Idle"/>
     <variant file="biped/attack_capture.xml"/>
     <variant file="biped/attack_slaughter.xml"/>
-    <variant file="biped/death_infantry.xml"/>
     <variant file="biped/gather_tree.xml"/>
     <variant file="biped/gather_grain.xml"/>
     <variant file="biped/gather_fruit.xml"/>
@@ -58,6 +52,7 @@
     <variant file="biped/gather_praise.xml"/>
     <variant file="biped/build.xml"/>
     <variant file="biped/build_farm.xml"/>
+    <variant file="biped/death_infantry.xml"/>
   </group>
   <material>player_trans_norm_spec.xml</material>
 </actor>
